@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<Mvc_Kiosk.T_GAME_TYPE_CONFIG_VALUES>
+
+@{
+    ViewBag.Title = "WebGrid Example";
+    var grid = new WebGrid(source: Model, rowsPerPage: 20);
+
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+<style type="text/css">
+    .mainpanel {
+        margin-left: 230px;
+        min-height: 636px;
+        padding: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    .info th {
+        background: #E0E0E0 !important;
+    }
+
+        .info th a {
+            color: #000000;
+            font-weight: normal;
+        }
+</style>
+
+@grid.GetHtml(tableStyle: "table table-striped table-hover",
+                 mode: WebGridPagerModes.All)
+

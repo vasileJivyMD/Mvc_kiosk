@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Mvc_Kiosk.T_CONFIG_VALUES>
+@{
+    Layout = null;
+    WebGrid grid = new WebGrid(Model);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+     @grid.GetHtml();
+    </div>
+</body>
+</html>
